@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ocean-50: #f0f9ff;
+  --color-ocean-100: #e0f2fe;
+  --color-ocean-200: #bae6fd;
+  --color-ocean-300: #7dd3fc;
+  --color-ocean-400: #38bdf8;
+  --color-ocean-500: #0ea5e9;
+  --color-ocean-600: #0284c7;
+  --color-ocean-700: #0369a1;
+  --color-ocean-800: #075985;
+  --color-ocean-900: #0c4a6e;
+  --color-ocean-950: #082f49;
+  --color-deep-50: #f5f3ff;
+  --color-deep-100: #ede9fe;
+  --color-deep-200: #ddd6fe;
+  --color-deep-300: #c4b5fd;
+  --color-deep-400: #a78bfa;
+  --color-deep-500: #8b5cf6;
+  --color-deep-600: #7c3aed;
+  --color-deep-700: #6d28d9;
+  --color-deep-800: #5b21b6;
+  --color-deep-900: #4c1d95;
+  --color-coral-400: #fb923c;
+  --color-coral-500: #f97316;
+  --color-coral-600: #ea580c;
+  --color-sea-400: #34d399;
+  --color-sea-500: #10b981;
+  --color-sea-600: #059669;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #082f49;
+  color: #e0f2fe;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* GSAP animation targets */
+.hero-badge,
+.hero-title .char,
+.hero-subtitle,
+.hero-cta,
+.hero-scroll-indicator,
+.animate-on-scroll,
+.product-card,
+.cart-panel,
+.testimonial-card,
+.floating-element {
+  will-change: transform, opacity;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c4a6e;
+}
+::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 3px;
+}
+
+/* Wave animation */
+@keyframes wave {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-25%) translateY(5px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+.wave-animation {
+  animation: wave 8s linear infinite;
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(14, 165, 233, 0.6); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
 }
