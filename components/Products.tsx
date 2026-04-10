@@ -70,10 +70,15 @@ export default function Products() {
               className="product-card group bg-ocean-900/60 border border-ocean-700/30 rounded-2xl overflow-hidden hover:border-ocean-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-ocean-500/10 hover:-translate-y-1"
             >
               {/* Header */}
-              <div className="relative h-36 bg-gradient-to-br from-ocean-800/50 to-ocean-900/50 flex items-center justify-center">
-                <span className="text-6xl group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">
-                  {product.emoji}
-                </span>
+              <div className="relative h-44 bg-ocean-800/50 overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <img
+                    src={product.image}
+                    alt={product.nameEs}
+                    className="max-h-40 object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
                 {product.badge && (
                   <span className="absolute top-3 right-3 px-2.5 py-1 bg-coral-500/90 text-white text-[10px] font-bold rounded-lg uppercase tracking-wide">
                     {product.badge}

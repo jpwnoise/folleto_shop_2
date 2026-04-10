@@ -31,6 +31,15 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        {/* Logo */}
+        <div className="mb-6 flex justify-center">
+          <img
+            src="/logo-2.png"
+            alt="Novillero Pescadería"
+            className="w-48 sm:w-56 md:w-64 drop-shadow-2xl"
+          />
+        </div>
+
         {/* Badge */}
         <div className="hero-badge inline-flex items-center gap-2 px-5 py-2.5 mb-8 rounded-full bg-ocean-500/10 backdrop-blur-sm border border-ocean-400/20">
           <span className="w-2 h-2 rounded-full bg-sea-400 animate-pulse" />
